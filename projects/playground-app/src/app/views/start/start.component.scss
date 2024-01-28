@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section div {
+  flex: 1;
+}
+
+.logo-wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
