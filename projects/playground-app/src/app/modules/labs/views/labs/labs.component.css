@@ -1,0 +1,9 @@
+.menu {
+  display: block;
+  margin: 10px 0;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}

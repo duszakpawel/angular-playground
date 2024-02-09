@@ -1,0 +1,4 @@
+<div class="menu">
+  <button type="button" routerLink="create/new">{{ 'ADD_LABORATORY' | translate }}</button>
+</div>
+<app-labs-list *ngIf="labs | async as labs" [labs]="labs" (labRemove)="removeLab($event)"></app-labs-list>
