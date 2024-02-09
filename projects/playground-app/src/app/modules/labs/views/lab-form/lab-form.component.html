@@ -1,0 +1,24 @@
+<h2>{{ 'LABORATORY' | translate }}</h2>
+
+<div>
+  <button type="button" routerLink="." [queryParams]="{step: 'details'}" routerLinkActive="active">{{ 'DETAILS' | translate }}</button>
+  <button type="button" routerLink="." [queryParams]="{step: 'equipments'}" routerLinkActive="active">{{ 'EQUIPMENT' | translate }}</button>
+</div>
+
+<div class="step-wrapper" [ngSwitch]="step | async">
+  <ng-container *ngSwitchCase="'equipments'">
+    <app-lab-equipments-form *ngIf="form.controls.equipments.enabled; else equipmentsDisabled" [formArray]="form.controls.equipments"
+                             (equipmentAdd)="addEquipment($event)"
+                             (equipmentRemove)="removeEquipment($event)">
+    </app-lab-equipments-form>
+    <ng-template #equipmentsDisabled>
+      <p>{{ 'CANNOT_MANAGE_EQUIPMENT' | translate }}</p>
+    </ng-template>
+  </ng-container>
+  <app-lab-details-form *ngSwitchDefault [formGroup]="form.controls.details"></app-lab-details-form>
+</div>
+
+<div>
+  <button type="button" (click)="saveLab()">{{ 'SAVE' | translate }}</button>
+  <button type="button" routerLink="../..">{{ 'CANCEL' | translate }}</button>
+</div>
