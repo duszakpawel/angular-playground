@@ -1,0 +1,8 @@
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+tbody {
+  height: 40px;
+}

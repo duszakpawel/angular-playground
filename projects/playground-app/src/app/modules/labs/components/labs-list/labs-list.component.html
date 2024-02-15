@@ -1,0 +1,16 @@
+<table>
+  <thead>
+  <th>{{ 'TECH_NAME' | translate }}</th>
+  <th>{{ 'LOCATION' | translate }}</th>
+  <th>{{ 'AUTONOMIC' | translate }}</th>
+  <th>{{ 'TAGS_ENABLED' | translate }}</th>
+  <th>{{ 'GEAR_COUNT' | translate }}</th>
+  <th></th>
+  </thead>
+  <tbody *ngFor="let lab of labs; trackBy: trackByFn" appLabsListItem [lab]="lab">
+    <div class="actions">
+      <button type="button" [routerLink]="['edit', lab.id]">{{ 'EDIT' | translate }}</button>
+      <button type="button" (click)="removeLab(lab)">{{ 'REMOVE' | translate }}</button>
+    </div>
+  </tbody>
+</table>
