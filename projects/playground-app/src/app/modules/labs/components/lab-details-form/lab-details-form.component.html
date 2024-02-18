@@ -1,0 +1,27 @@
+<div>
+  <div class="form-field inline">
+    <label>{{ 'TECH_NAME' | translate }}</label>
+    <input type="text" [formControl]="formGroup.controls.name">
+  </div>
+
+    <div class="form-field inline">
+      <label>{{ 'LOCATION' | translate }}</label>
+      <app-lab-moon-id-selector [formControl]="formGroup.controls.moonId"></app-lab-moon-id-selector>
+    </div>
+  </div>
+
+<div>
+  <div class="form-field inline">
+    <label>
+      <input type="checkbox" [formControl]="formGroup.controls.autonomous">
+      {{ 'AUTONOM_LAB' | translate }}
+    </label>
+  </div>
+
+  <div class="form-field inline">
+    <label>
+      <input type="checkbox" [formControl]="formGroup.controls.enableTags">
+      {{ 'ENABLE_TAGS' | translate }}
+    </label>
+  </div>
+</div>
