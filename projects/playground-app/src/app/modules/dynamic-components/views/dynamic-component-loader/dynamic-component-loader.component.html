@@ -1,0 +1,5 @@
+<div class="buttons-container">
+  <button (click)="loadComponent(DynamicComponentsEnum.DynamicComponentOneComponent)">{{'LOAD_COMPONENT_ONE' | translate}}</button>
+  <button (click)="loadComponent(DynamicComponentsEnum.DynamicComponentTwoComponent)">{{'LOAD_COMPONENT_TWO' | translate}}</button>
+</div>
+<ng-template #dynamicContainer></ng-template>
