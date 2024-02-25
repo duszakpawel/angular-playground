@@ -1,0 +1,7 @@
+<app-cats-search
+  *ngIf="queryParams | async as queryParams"
+  [params]="queryParams"
+  (paramsChange)="searchCats($event)"
+></app-cats-search>
+<app-cats-list *ngIf="cats | async as cats" [cats]="cats" (catDetailsUpdate)="updateCatDetails($event)"></app-cats-list>
+
