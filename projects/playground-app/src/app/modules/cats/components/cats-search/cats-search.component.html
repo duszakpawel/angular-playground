@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="search()">
+  <label for="sort-control">{{'SORT_BY_COLUMN' | translate}}</label>
+  <select [formControl]="form.controls.sort" id="sort-control">
+    <option value="id">{{'IDENTIFIER' | translate}}</option>
+    <option value="name">{{'NAME' | translate}}</option>
+    <option value="breed">{{'BREED' | translate}}</option>
+    <option value="description">{{'DESCRIPTION' | translate}}</option>
+  </select>
+  <label for="order-control">{{'SORT_DIRECTION' | translate}}</label>
+  <select [formControl]="form.controls.order" id="order-control">
+    <option value="ASC">{{'ASCENDING' | translate}}</option>
+    <option value="DESC">{{'DESCENDING' | translate}}</option>
+  </select>
+  <label for="query-control">{{'AND_SEARCH' | translate}}</label>
+  <input type="text" [formControl]="form.controls.query" placeholder="{{'BY_PHRASE' | translate}}" id="query-control">
+  <button type="submit">{{'SEARCH' | translate}}</button>
+</form>
