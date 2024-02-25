@@ -1,0 +1,66 @@
+.cats-viewport {
+  display: block;
+  height: calc(100vh - 120px);
+  overflow: auto;
+  display: block;
+}
+
+.virtual-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.virtual-table-header, .virtual-table-row {
+  display: flex;
+  width: 100%;
+}
+
+.virtual-table-row {
+  display: flex;
+  width: 100%;
+  height: 320px;
+}
+
+.virtual-table-header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.virtual-table-cell {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+
+.virtual-table-header, .virtual-table-row {
+  display: flex;
+  width: 100%;
+}
+
+.virtual-table-header > .virtual-table-cell:nth-child(1),
+.virtual-table-row > .virtual-table-cell:nth-child(1) {
+  flex: 0 0 20%;
+}
+
+.virtual-table-header > .virtual-table-cell:nth-child(2),
+.virtual-table-row > .virtual-table-cell:nth-child(2) {
+  flex: 0 0 10%;
+}
+
+.virtual-table-header > .virtual-table-cell:nth-child(3),
+.virtual-table-row > .virtual-table-cell:nth-child(3) {
+  flex: 0 0 10%;
+}
+
+.virtual-table-header > .virtual-table-cell:nth-child(4),
+.virtual-table-row > .virtual-table-cell:nth-child(4) {
+  flex: 0 0 10%;
+}
+
+.virtual-table-header > .virtual-table-cell:nth-child(5),
+.virtual-table-row > .virtual-table-cell:nth-child(5) {
+  flex: 0 0 50%;
+}

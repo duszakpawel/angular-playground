@@ -1,0 +1,20 @@
+<cdk-virtual-scroll-viewport [itemSize]="320" class="cats-viewport" minBufferPx="1200" maxBufferPx="1200">
+  <div class="virtual-table">
+    <div class="virtual-table-header">
+      <div class="virtual-table-cell">{{ 'PHOTO' | translate }}</div>
+      <div class="virtual-table-cell">{{ 'IDENTIFIER' | translate }}</div>
+      <div class="virtual-table-cell">{{ 'NAME' | translate }}</div>
+      <div class="virtual-table-cell">{{ 'BREED' | translate }}</div>
+      <div class="virtual-table-cell">{{ 'DESCRIPTION' | translate }}</div>
+    </div>
+    <div *cdkVirtualFor="let cat of cats; trackBy: trackByFn" class="virtual-table-row">
+      <div class="virtual-table-cell">
+        <img [src]="cat.imagePath" appFallbackImage="assets/cats/errorCat.png">
+      </div>
+      <div class="virtual-table-cell">{{ cat.id }}</div>
+      <div class="virtual-table-cell">{{ cat.name }}</div>
+      <div class="virtual-table-cell">{{ cat.breed }}</div>
+      <div class="virtual-table-cell">{{ cat.description }}</div>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>
