@@ -1,0 +1,19 @@
+<div class="question">
+  <canvas id="confetti-canvas">
+  </canvas>
+  <div id="video-player"></div>
+  <div class="items-container" id="question" *ngIf="showQuestion">
+    <div class="title">{{'DO_YOU_WANNA_GO_OUT' | translate}}</div>
+    <img class="gif" src="assets/cats/ask1.gif">
+    <div class="options-container">
+      <button class="pink-button" (click)="showAnswer()">{{'YES' | translate}}</button>
+      <button class="pink-button move-button" (mouseover)="moveButton($event)" disabled>{{'NO' | translate}}</button>
+    </div>
+  </div>
+  <div class="items-container" id="answer" *ngIf="!showQuestion">
+    <div class="title">
+      {{'YIPPIE' | translate}}
+    </div>
+    <img class="gif" src="assets/cats/ask2.gif">
+  </div>
+</div>

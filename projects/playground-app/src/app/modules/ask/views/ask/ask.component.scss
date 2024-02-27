@@ -1,0 +1,85 @@
+$pingBackgroundColor: #d0b5e2;
+$pinkButtonColor: #dfa8c5;
+
+.pink-background {
+  background-color: $pingBackgroundColor;
+}
+
+.title {
+  font-size: xx-large;
+  color: white;
+  text-align: center;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+
+.gif {
+  padding-top: 30px;
+  max-width: 250px;
+}
+
+.pink-button {
+  background-color: $pinkButtonColor;
+  border-color: $pinkButtonColor;
+  border-radius: 10px;
+  font-size: 30px;
+  height: 50px;
+  border-width: 1px;
+  color: white;
+}
+
+.move-button {
+  transition: transform 0.5s ease;
+  transform: translate(0px, 0px);
+}
+
+.options-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#confetti-canvas{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+.video-player {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+iframe#video-player {
+  width: 0;
+  height: 0;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.question {
+  display: block;
+  height: 100%;
+}
+
+.answer {
+  display: block;
+  height: 100%;
+}
