@@ -1,0 +1,45 @@
+<div class="main-container">
+<div class="header" *ngIf="navigationVisible | async">
+  <a routerLink="/start" *appIfFeatureEnabled="'start'">{{'MENU.MAIN' | translate}}</a>
+  <a routerLink="/cats" *appIfFeatureEnabled="'cats'">{{'MENU.VIRTUAL_SCROLL' | translate}}</a>
+  <a routerLink="/labs" *appIfFeatureEnabled="'labs'">{{ 'MENU.LABORATORIES' | translate }}</a>
+  <a routerLink="/ask">{{ 'MENU.ASK_THEM_OUT' | translate }}</a>
+  <a routerLink="/dynamic-components">{{ 'MENU.DYNAMIC_COMPONENTS' | translate }}</a>
+</div>
+
+<div class="buttons-container">
+  <ng-container *ngIf="isSubscribed | async; else requestSubTmpl">
+    <button (click)="revokeSubscription()">{{'DISABLE_NOTIFICATIONS' | translate}}</button>
+  </ng-container>
+  <ng-template #requestSubTmpl>
+    <button (click)="requestSubscription()">{{'ENABLE_NOTIFICATIONS' | translate}}</button>
+  </ng-template>
+  {{'MENU_HEADER' | translate}}
+  <button (click)="showNavigation()">{{'SHOW' | translate}}</button>
+  <button (click)="hideNavigation()">{{'HIDE' | translate}}</button>
+  {{'LANGUAGE_HEADER' | translate}}
+  <select #langSelect (change)="changeLanguage(langSelect.value)">
+    <option value="en">English</option>
+    <option value="pl">Polski</option>
+  </select>
+</div>
+
+<div class="container" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+<router-outlet name="browser"></router-outlet>
+<div class="version">
+  <small>{{'LAST_BUILD' | translate}} {{appVersion}}</small>
+</div>
+<div class="loading" *ngIf="busy | async">
+  {{'PROCESSING_DATA' | translate}}
+</div>
+<div class="update" *ngIf="updateAvailable | async">
+  {{'APP_UPDATE_AVAILABLE' | translate}}
+  <button (click)="activateUpdate()">{{'ACTIVATE' | translate}}</button>
+</div>
+<div class="error" *ngIf="unrecoverableError | async">
+  {{'CRITICAL_ERROR_OCCURED' | translate}}
+  <button (click)="reloadApp()">{{'REFRESH_SITE' | translate}}</button>
+</div>
+</div>

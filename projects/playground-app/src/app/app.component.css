@@ -1,0 +1,47 @@
+.loading {
+    position: fixed;
+    bottom: 0;
+    padding: 4px;
+    text-align: center;
+    background-color: orange;
+    width: 100%;
+  }
+
+  .update {
+    position: fixed;
+    bottom: 0;
+    padding: 4px;
+    text-align: center;
+    background-color: greenyellow;
+    width: 100%;
+  }
+
+  .error {
+    position: fixed;
+    bottom: 0;
+    padding: 4px;
+    text-align: center;
+    background-color: orangered;
+    width: 100%;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .main-container {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .version {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+  }
