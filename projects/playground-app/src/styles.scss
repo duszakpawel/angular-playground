@@ -1,0 +1,33 @@
+@import 'tables';
+@import 'forms';
+
+* {
+  font-family: Arial, serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.header a {
+  padding: 0 4px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.thumbnail {
+  max-width: 100px;
+}
