@@ -1,0 +1,17 @@
+version: '1.0'
+services:
+  dev-api:
+    build:
+      context: .
+      dockerfile: projects/dev-api/Dockerfile
+    ports:
+      - "4510:4510"
+    environment:
+      VIRTUAL_HOST: typescript.json-server.docker
+
+  playground-app:
+    build:
+      context: .
+      dockerfile: projects/playground-app/Dockerfile
+    ports:
+      - "8002:80"
