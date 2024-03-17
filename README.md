@@ -1,5 +1,5 @@
 
-# Digital playground
+# angular playground
 
 This is a project to put random stuff in that is related to angular.
 
