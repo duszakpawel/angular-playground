@@ -3,6 +3,10 @@
 
 This is a project to put random stuff in that is related to angular.
 
+
+https://github.com/duszakpawel/angular-playground/assets/17085237/e4ac3d76-653b-4b91-8e44-2f8ad32aac68
+
+
 Features:
 
  - dev api - json server serving mocks for playground app
